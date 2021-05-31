@@ -35,3 +35,15 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+jar {
+    manifest {
+        attributes "Main-Class" : "com.joey.jump.Main"
+    }
+}
+
+task spigotJar(type: Copy) {
+    from jar
+    into 'D:\\desktop\\paper-server\\plugins'
+}
+
